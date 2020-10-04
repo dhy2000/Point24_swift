@@ -90,19 +90,184 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pw-Uf-oN8">
-                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pw-Uf-oN8">
+                                <rect key="frame" x="20" y="20" width="38" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Exit"/>
                                 <connections>
                                     <action selector="exitOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="PcQ-bp-Rat"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hk8-yY-oAF">
+                                <rect key="frame" x="20" y="470" width="560" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uff-Fz-KgR">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="dmh-Ow-A9n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64Z-nk-qJn">
+                                        <rect key="frame" x="140" y="0.0" width="140" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="subOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="GRQ-XP-sO1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4a-6x-joh">
+                                        <rect key="frame" x="280" y="0.0" width="140" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="×"/>
+                                        <connections>
+                                            <action selector="mulOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="pKy-h8-sgv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-u8-2mT">
+                                        <rect key="frame" x="420" y="0.0" width="140" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="÷"/>
+                                        <connections>
+                                            <action selector="divOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="V2z-hz-3m2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0TF-n9-egF">
+                                <rect key="frame" x="20" y="352" width="560" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XB5-Zu-7Z4">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="num1OnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="ZvJ-gY-ccW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cou-Gh-bwC">
+                                        <rect key="frame" x="140" y="0.0" width="140" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="num2OnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="Dt9-kZ-OeW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ3-fc-jTH">
+                                        <rect key="frame" x="280" y="0.0" width="140" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="num3OnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="Xbq-US-Q5p"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-Nb-War">
+                                        <rect key="frame" x="420" y="0.0" width="140" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="num4OnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="oNS-66-RHY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAQ-0l-aha">
+                                <rect key="frame" x="265" y="168" width="71" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="S3L-xj-Amc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="SvO-ya-xYv"/>
+                                    <constraint firstAttribute="height" constant="71" id="W2w-Xw-QtH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ak-Li-muT">
+                                <rect key="frame" x="117" y="134" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="i62-Ag-8Kz"/>
+                                    <constraint firstAttribute="width" constant="140" id="qi5-KK-wRB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUY-sG-QXb">
+                                <rect key="frame" x="344" y="134" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="M8X-rZ-cjQ"/>
+                                    <constraint firstAttribute="height" constant="140" id="dwH-Fx-lTf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-22-QVx">
+                                <rect key="frame" x="195" y="20" width="210" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Ak-Li-muT" firstAttribute="centerY" secondItem="fAQ-0l-aha" secondAttribute="centerY" id="PRH-gf-rBl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0Pw-Uf-oN8" secondAttribute="leading" id="QLU-O4-4WQ"/>
+                            <constraint firstItem="fAQ-0l-aha" firstAttribute="centerX" secondItem="0TF-n9-egF" secondAttribute="centerX" id="U2o-lk-U3E"/>
+                            <constraint firstItem="Hk8-yY-oAF" firstAttribute="top" secondItem="0TF-n9-egF" secondAttribute="bottom" constant="8" symbolic="YES" id="W3u-gT-9q5"/>
+                            <constraint firstItem="LUY-sG-QXb" firstAttribute="leading" secondItem="fAQ-0l-aha" secondAttribute="trailing" constant="8" symbolic="YES" id="WNU-6w-iVA"/>
+                            <constraint firstItem="fAQ-0l-aha" firstAttribute="centerY" secondItem="J1F-qT-Uda" secondAttribute="centerY" constant="-96.5" id="Zbf-n8-Frh"/>
+                            <constraint firstItem="Hk8-yY-oAF" firstAttribute="trailing" secondItem="J1F-qT-Uda" secondAttribute="trailingMargin" id="az0-wa-Wfq"/>
+                            <constraint firstItem="0Pw-Uf-oN8" firstAttribute="top" secondItem="wHA-mO-gXt" secondAttribute="bottom" id="bzR-q3-Leb"/>
+                            <constraint firstItem="Hk8-yY-oAF" firstAttribute="top" secondItem="J1F-qT-Uda" secondAttribute="top" constant="470" id="eDA-kC-3gx"/>
+                            <constraint firstItem="0TF-n9-egF" firstAttribute="top" secondItem="J1F-qT-Uda" secondAttribute="top" constant="352" id="ibG-Ug-RZw"/>
+                            <constraint firstItem="6Ak-Li-muT" firstAttribute="baseline" secondItem="LUY-sG-QXb" secondAttribute="baseline" id="jUN-tM-p4b"/>
+                            <constraint firstItem="XfH-WZ-P91" firstAttribute="top" secondItem="Hk8-yY-oAF" secondAttribute="bottom" constant="20" id="jh3-jD-UYR"/>
+                            <constraint firstItem="fAQ-0l-aha" firstAttribute="leading" secondItem="6Ak-Li-muT" secondAttribute="trailing" constant="8" symbolic="YES" id="s5T-Lg-shL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0TF-n9-egF" secondAttribute="trailing" id="ugD-Da-j78"/>
+                            <constraint firstItem="Hk8-yY-oAF" firstAttribute="leading" secondItem="J1F-qT-Uda" secondAttribute="leadingMargin" id="unl-nd-cGy"/>
+                            <constraint firstItem="0TF-n9-egF" firstAttribute="leading" secondItem="Hk8-yY-oAF" secondAttribute="leading" id="urX-2F-NoS"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="Uff-Fz-KgR" id="9O5-El-YeO"/>
+                        <outlet property="divButton" destination="Tf3-u8-2mT" id="Z8o-lQ-Y6I"/>
                         <outlet property="exitButton" destination="0Pw-Uf-oN8" id="3Sp-Li-w2S"/>
+                        <outlet property="mulButton" destination="K4a-6x-joh" id="dgq-Ba-HMF"/>
+                        <outlet property="num1Button" destination="XB5-Zu-7Z4" id="fry-1B-XSm"/>
+                        <outlet property="num2Button" destination="Cou-Gh-bwC" id="8Ca-aY-Q4U"/>
+                        <outlet property="num3Button" destination="lJ3-fc-jTH" id="Qsu-tZ-SMd"/>
+                        <outlet property="num4Button" destination="9rt-Nb-War" id="FH9-TM-p6g"/>
+                        <outlet property="operand1Label" destination="6Ak-Li-muT" id="kUx-DZ-OWg"/>
+                        <outlet property="operand2Label" destination="LUY-sG-QXb" id="RM4-LS-0FW"/>
+                        <outlet property="operatorLabel" destination="fAQ-0l-aha" id="Oq8-Bs-MQz"/>
+                        <outlet property="subButton" destination="64Z-nk-qJn" id="2Pw-Kl-Cpq"/>
+                        <outlet property="totalScoreLabel" destination="mwZ-22-QVx" id="v6q-a9-nVS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0t6-Ok-DDa" userLabel="First Responder" sceneMemberID="firstResponder"/>

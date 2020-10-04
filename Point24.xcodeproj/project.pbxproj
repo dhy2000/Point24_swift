@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186F1A4E2529D04E00D524A5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F1A4D2529D04E00D524A5 /* GameViewController.swift */; };
+		186F1A502529F7AC00D524A5 /* RationalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F1A4F2529F7AC00D524A5 /* RationalNumber.swift */; };
 		18D4677C2529C56A00DB11B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4677B2529C56A00DB11B2 /* AppDelegate.swift */; };
 		18D4677E2529C56A00DB11B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4677D2529C56A00DB11B2 /* ViewController.swift */; };
 		18D467812529C56A00DB11B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D4677F2529C56A00DB11B2 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		186F1A4D2529D04E00D524A5 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		186F1A4F2529F7AC00D524A5 /* RationalNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RationalNumber.swift; sourceTree = "<group>"; };
 		18D467782529C56A00DB11B2 /* Point24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Point24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D4677B2529C56A00DB11B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D4677D2529C56A00DB11B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				18D4677D2529C56A00DB11B2 /* ViewController.swift */,
 				18D4677F2529C56A00DB11B2 /* Main.storyboard */,
 				186F1A4D2529D04E00D524A5 /* GameViewController.swift */,
+				186F1A4F2529F7AC00D524A5 /* RationalNumber.swift */,
 				18D467822529C56A00DB11B2 /* Assets.xcassets */,
 				18D467842529C56A00DB11B2 /* LaunchScreen.storyboard */,
 				18D467872529C56A00DB11B2 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				18D4677E2529C56A00DB11B2 /* ViewController.swift in Sources */,
 				186F1A4E2529D04E00D524A5 /* GameViewController.swift in Sources */,
+				186F1A502529F7AC00D524A5 /* RationalNumber.swift in Sources */,
 				18D4677C2529C56A00DB11B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
