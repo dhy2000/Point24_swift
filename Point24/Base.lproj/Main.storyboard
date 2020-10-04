@@ -71,6 +71,7 @@
                     <connections>
                         <outlet property="exitButton" destination="DG7-ww-ULI" id="LpQ-rK-fYz"/>
                         <outlet property="playButton" destination="nQg-4I-Niz" id="vQv-NV-9iX"/>
+                        <segue destination="g5d-Ga-WhO" kind="show" identifier="startGame" id="2HT-Oh-3gY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,8 +89,21 @@
                     <view key="view" contentMode="scaleToFill" id="J1F-qT-Uda">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pw-Uf-oN8">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="exitOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="PcQ-bp-Rat"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="exitButton" destination="0Pw-Uf-oN8" id="3Sp-Li-w2S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0t6-Ok-DDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

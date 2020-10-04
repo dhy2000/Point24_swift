@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     @IBAction func playOnClick(sender: UIButton, forEvent event: UIEvent) {
         print("Hello, Let\'s Start Game")
+        performSegueWithIdentifier("startGame", sender: nil)
     }
     
     @IBAction func exitOnClick(sender: UIButton, forEvent event: UIEvent) {
