@@ -227,27 +227,46 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-22-QVx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-22-QVx">
                                 <rect key="frame" x="195" y="20" width="210" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="omP-tK-3i1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r5-rX-lVH">
+                                <rect key="frame" x="505" y="20" width="75" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="3yg-gH-9k6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="gaf-dN-e3Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="45Z-ny-bxV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7r5-rX-lVH" firstAttribute="top" secondItem="0Pw-Uf-oN8" secondAttribute="top" id="K25-q1-kCx"/>
                             <constraint firstItem="6Ak-Li-muT" firstAttribute="centerY" secondItem="fAQ-0l-aha" secondAttribute="centerY" id="PRH-gf-rBl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0Pw-Uf-oN8" secondAttribute="leading" id="QLU-O4-4WQ"/>
                             <constraint firstItem="fAQ-0l-aha" firstAttribute="centerX" secondItem="0TF-n9-egF" secondAttribute="centerX" id="U2o-lk-U3E"/>
                             <constraint firstItem="Hk8-yY-oAF" firstAttribute="top" secondItem="0TF-n9-egF" secondAttribute="bottom" constant="8" symbolic="YES" id="W3u-gT-9q5"/>
                             <constraint firstItem="LUY-sG-QXb" firstAttribute="leading" secondItem="fAQ-0l-aha" secondAttribute="trailing" constant="8" symbolic="YES" id="WNU-6w-iVA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7r5-rX-lVH" secondAttribute="trailing" id="ZCe-cr-6QR"/>
                             <constraint firstItem="fAQ-0l-aha" firstAttribute="centerY" secondItem="J1F-qT-Uda" secondAttribute="centerY" constant="-96.5" id="Zbf-n8-Frh"/>
                             <constraint firstItem="Hk8-yY-oAF" firstAttribute="trailing" secondItem="J1F-qT-Uda" secondAttribute="trailingMargin" id="az0-wa-Wfq"/>
                             <constraint firstItem="0Pw-Uf-oN8" firstAttribute="top" secondItem="wHA-mO-gXt" secondAttribute="bottom" id="bzR-q3-Leb"/>
                             <constraint firstItem="Hk8-yY-oAF" firstAttribute="top" secondItem="J1F-qT-Uda" secondAttribute="top" constant="470" id="eDA-kC-3gx"/>
+                            <constraint firstItem="7r5-rX-lVH" firstAttribute="top" secondItem="mwZ-22-QVx" secondAttribute="top" id="iaI-2n-bka"/>
                             <constraint firstItem="0TF-n9-egF" firstAttribute="top" secondItem="J1F-qT-Uda" secondAttribute="top" constant="352" id="ibG-Ug-RZw"/>
                             <constraint firstItem="6Ak-Li-muT" firstAttribute="baseline" secondItem="LUY-sG-QXb" secondAttribute="baseline" id="jUN-tM-p4b"/>
                             <constraint firstItem="XfH-WZ-P91" firstAttribute="top" secondItem="Hk8-yY-oAF" secondAttribute="bottom" constant="20" id="jh3-jD-UYR"/>
+                            <constraint firstItem="mwZ-22-QVx" firstAttribute="centerX" secondItem="fAQ-0l-aha" secondAttribute="centerX" id="qAT-Hn-CmH"/>
                             <constraint firstItem="fAQ-0l-aha" firstAttribute="leading" secondItem="6Ak-Li-muT" secondAttribute="trailing" constant="8" symbolic="YES" id="s5T-Lg-shL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0TF-n9-egF" secondAttribute="trailing" id="ugD-Da-j78"/>
                             <constraint firstItem="Hk8-yY-oAF" firstAttribute="leading" secondItem="J1F-qT-Uda" secondAttribute="leadingMargin" id="unl-nd-cGy"/>
@@ -266,6 +285,7 @@
                         <outlet property="operand1Label" destination="6Ak-Li-muT" id="kUx-DZ-OWg"/>
                         <outlet property="operand2Label" destination="LUY-sG-QXb" id="RM4-LS-0FW"/>
                         <outlet property="operatorLabel" destination="fAQ-0l-aha" id="Oq8-Bs-MQz"/>
+                        <outlet property="restartButton" destination="7r5-rX-lVH" id="ZZj-Lg-0sY"/>
                         <outlet property="subButton" destination="64Z-nk-qJn" id="2Pw-Kl-Cpq"/>
                         <outlet property="totalScoreLabel" destination="mwZ-22-QVx" id="v6q-a9-nVS"/>
                     </connections>
