@@ -248,9 +248,23 @@
                                     <action selector="restartOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="45Z-ny-bxV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="839-yE-MkE">
+                                <rect key="frame" x="505" y="68" width="75" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Da5-Mb-jMF"/>
+                                    <constraint firstAttribute="height" constant="45" id="w6h-YU-SNu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skipOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="rBh-AL-mZQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="839-yE-MkE" firstAttribute="trailing" secondItem="J1F-qT-Uda" secondAttribute="trailingMargin" id="7kx-cz-GYL"/>
+                            <constraint firstItem="839-yE-MkE" firstAttribute="top" secondItem="7r5-rX-lVH" secondAttribute="bottom" constant="8" id="7s5-wh-mqs"/>
                             <constraint firstItem="7r5-rX-lVH" firstAttribute="top" secondItem="0Pw-Uf-oN8" secondAttribute="top" id="K25-q1-kCx"/>
                             <constraint firstItem="6Ak-Li-muT" firstAttribute="centerY" secondItem="fAQ-0l-aha" secondAttribute="centerY" id="PRH-gf-rBl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0Pw-Uf-oN8" secondAttribute="leading" id="QLU-O4-4WQ"/>
@@ -286,6 +300,7 @@
                         <outlet property="operand2Label" destination="LUY-sG-QXb" id="RM4-LS-0FW"/>
                         <outlet property="operatorLabel" destination="fAQ-0l-aha" id="Oq8-Bs-MQz"/>
                         <outlet property="restartButton" destination="7r5-rX-lVH" id="ZZj-Lg-0sY"/>
+                        <outlet property="skipButton" destination="839-yE-MkE" id="dz1-xU-voE"/>
                         <outlet property="subButton" destination="64Z-nk-qJn" id="2Pw-Kl-Cpq"/>
                         <outlet property="totalScoreLabel" destination="mwZ-22-QVx" id="v6q-a9-nVS"/>
                     </connections>

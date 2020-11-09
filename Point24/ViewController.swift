@@ -33,7 +33,5 @@ class ViewController: UIViewController {
         // print("Bye~")
         exit(0)
     }
-
-
 }
 

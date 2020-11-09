@@ -23,6 +23,8 @@ class GameViewController : UIViewController {
     @IBOutlet weak var totalScoreLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
+    
+    @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var operand1Label: UILabel!
     @IBOutlet weak var operand2Label: UILabel!
     @IBOutlet weak var operatorLabel: UILabel!
@@ -68,6 +70,9 @@ class GameViewController : UIViewController {
     }
     @IBAction func restartOnClick(sender: UIButton, forEvent event: UIEvent) {
         restartCurrentGame()
+    }
+    @IBAction func skipOnClick(sender: UIButton, forEvent event: UIEvent) {
+        startGame()
     }
     
     func updateButtoni(i: Int, _ txt: String) {
@@ -176,7 +181,7 @@ class GameViewController : UIViewController {
     
     func startGame() {
         for i in 0...3 {
-            initArr[i] = Int(rand()) % 13 + 1
+            initArr[i] = Int(arc4random() % 13 + 1)
         }
         restartCurrentGame()
         updateView()
