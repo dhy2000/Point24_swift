@@ -260,6 +260,15 @@
                                     <action selector="skipOnClick:forEvent:" destination="g5d-Ga-WhO" eventType="touchUpInside" id="rBh-AL-mZQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAj-iP-w1C">
+                                <rect key="frame" x="20" y="79" width="560" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="5ip-tL-Nn5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -276,21 +285,25 @@
                             <constraint firstItem="Hk8-yY-oAF" firstAttribute="trailing" secondItem="J1F-qT-Uda" secondAttribute="trailingMargin" id="az0-wa-Wfq"/>
                             <constraint firstItem="0Pw-Uf-oN8" firstAttribute="top" secondItem="wHA-mO-gXt" secondAttribute="bottom" id="bzR-q3-Leb"/>
                             <constraint firstItem="Hk8-yY-oAF" firstAttribute="top" secondItem="J1F-qT-Uda" secondAttribute="top" constant="470" id="eDA-kC-3gx"/>
+                            <constraint firstItem="fAj-iP-w1C" firstAttribute="trailing" secondItem="J1F-qT-Uda" secondAttribute="trailingMargin" id="i9Z-2o-Bzp"/>
                             <constraint firstItem="7r5-rX-lVH" firstAttribute="top" secondItem="mwZ-22-QVx" secondAttribute="top" id="iaI-2n-bka"/>
                             <constraint firstItem="0TF-n9-egF" firstAttribute="top" secondItem="J1F-qT-Uda" secondAttribute="top" constant="352" id="ibG-Ug-RZw"/>
                             <constraint firstItem="6Ak-Li-muT" firstAttribute="baseline" secondItem="LUY-sG-QXb" secondAttribute="baseline" id="jUN-tM-p4b"/>
                             <constraint firstItem="XfH-WZ-P91" firstAttribute="top" secondItem="Hk8-yY-oAF" secondAttribute="bottom" constant="20" id="jh3-jD-UYR"/>
                             <constraint firstItem="mwZ-22-QVx" firstAttribute="centerX" secondItem="fAQ-0l-aha" secondAttribute="centerX" id="qAT-Hn-CmH"/>
+                            <constraint firstItem="fAj-iP-w1C" firstAttribute="top" secondItem="7r5-rX-lVH" secondAttribute="bottom" constant="19" id="rqR-2P-6z2"/>
                             <constraint firstItem="fAQ-0l-aha" firstAttribute="leading" secondItem="6Ak-Li-muT" secondAttribute="trailing" constant="8" symbolic="YES" id="s5T-Lg-shL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0TF-n9-egF" secondAttribute="trailing" id="ugD-Da-j78"/>
                             <constraint firstItem="Hk8-yY-oAF" firstAttribute="leading" secondItem="J1F-qT-Uda" secondAttribute="leadingMargin" id="unl-nd-cGy"/>
                             <constraint firstItem="0TF-n9-egF" firstAttribute="leading" secondItem="Hk8-yY-oAF" secondAttribute="leading" id="urX-2F-NoS"/>
+                            <constraint firstItem="fAj-iP-w1C" firstAttribute="leading" secondItem="J1F-qT-Uda" secondAttribute="leadingMargin" id="wZP-Qf-xl5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="Uff-Fz-KgR" id="9O5-El-YeO"/>
                         <outlet property="divButton" destination="Tf3-u8-2mT" id="Z8o-lQ-Y6I"/>
                         <outlet property="exitButton" destination="0Pw-Uf-oN8" id="3Sp-Li-w2S"/>
+                        <outlet property="exprLabel" destination="fAj-iP-w1C" id="42E-Yd-lbe"/>
                         <outlet property="mulButton" destination="K4a-6x-joh" id="dgq-Ba-HMF"/>
                         <outlet property="num1Button" destination="XB5-Zu-7Z4" id="fry-1B-XSm"/>
                         <outlet property="num2Button" destination="Cou-Gh-bwC" id="8Ca-aY-Q4U"/>

@@ -10,19 +10,22 @@ import Foundation
 
 class RationalNumber {
     var p: Int = 0, q: Int = 1
-    
+    var expr: String = ""
     init() {
         p = 0
         q = 1
+        expr = toString()
     }
     init(_ n: Int) {
         p = n
         q = 1
+        expr = toString()
     }
     init(_ p: Int, _ q: Int) {
         self.p = p
         self.q = q
         simplify(&self.p, &self.q)
+        expr = toString()
     }
     
     private func gcd(x: Int, _ y : Int) -> Int {
@@ -46,11 +49,32 @@ class RationalNumber {
         var ansq: Int = self.q / gcdq * b.q
         var ansp: Int = self.p * (ansq / self.q) + b.p * (ansq / b.q)
         simplify(&ansp, &ansq)
-        return RationalNumber(ansp, ansq)
+        let ret = RationalNumber(ansp, ansq)
+        var lpart = self.expr
+        var rpart = b.expr
+        if self.isExpr() {
+            lpart = "(" + lpart + ")"
+        }
+        if b.isExpr() {
+            rpart = "(" + rpart + ")"
+        }
+        ret.expr = lpart + "+" + rpart
+        return ret
     }
     func sub(b: RationalNumber) -> RationalNumber {
         let invb = RationalNumber(-b.p, b.q)
-        return self.add(invb)
+        
+        let ret = self.add(invb)
+        var lpart = self.expr
+        var rpart = b.expr
+        if self.isExpr() {
+            lpart = "(" + lpart + ")"
+        }
+        if b.isExpr() {
+            rpart = "(" + rpart + ")"
+        }
+        ret.expr = lpart + "-" + rpart
+        return ret
     }
     func mul(b: RationalNumber) -> RationalNumber {
         var p1: Int = self.p
@@ -64,14 +88,35 @@ class RationalNumber {
         var ansp: Int = p1 * p2
         var ansq: Int = q1 * q2
         simplify(&ansp, &ansq)
-        return RationalNumber(ansp, ansq)
+        ///return RationalNumber(ansp, ansq)
+        let ret = RationalNumber(ansp, ansq)
+        var lpart = self.expr
+        var rpart = b.expr
+        if self.isExpr() {
+            lpart = "(" + lpart + ")"
+        }
+        if b.isExpr() {
+            rpart = "(" + rpart + ")"
+        }
+        ret.expr = lpart + "*" + rpart
+        return ret
     }
     func div(b: RationalNumber) -> RationalNumber {
         if b.q == 0 {
             return RationalNumber(1)
         }
         let invb = RationalNumber(b.q, b.p)
-        return self.mul(invb)
+        let ret = self.mul(invb)
+        var lpart = self.expr
+        var rpart = b.expr
+        if self.isExpr() {
+            lpart = "(" + lpart + ")"
+        }
+        if b.isExpr() {
+            rpart = "(" + rpart + ")"
+        }
+        ret.expr = lpart + "/" + rpart
+        return ret
     }
     
     func compareTo(b: RationalNumber) -> Int {
@@ -84,6 +129,18 @@ class RationalNumber {
             return "\(p)"
         }
         return "\(p)/\(q)"
+    }
+    func isExpr() -> Bool {
+        var flg: Bool = true
+        for chr in expr.characters {
+            switch chr {
+            case "0"..."9":
+                break
+            default:
+                flg = false
+            }
+        }
+        return !flg
     }
 }
 

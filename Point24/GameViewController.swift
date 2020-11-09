@@ -20,6 +20,7 @@ class GameViewController : UIViewController {
     
     var totalScore: Int = 0
     
+    @IBOutlet weak var exprLabel: UILabel!
     @IBOutlet weak var totalScoreLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
@@ -108,6 +109,24 @@ class GameViewController : UIViewController {
         return false
     }
     
+    func updateExprShow() {
+        var disp: String = ""
+        var mulflg: Bool = false
+        for i in 0..<4 {
+            if let num = numArr[i] {
+                if num.isExpr() {
+                    if mulflg {
+                        disp = disp + ","
+                    }
+                    disp = disp + num.expr
+                    mulflg = true
+                }
+            }
+        }
+        // print(disp)
+        exprLabel.text = disp
+    }
+    
     func updateView() {
         totalScoreLabel.text = "Total Score: \(totalScore)"
         if checkCalculate() {
@@ -117,7 +136,19 @@ class GameViewController : UIViewController {
         }
         if checkWin() {
             totalScore += 1
+            let alertController = UIAlertController(title: "WIN", message: "You Win !!!\n Your Expression is \(numArr[0]!.expr)", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "Next Level", style: .Default, handler: nil)
+            alertController.addAction(action)
+            self.presentViewController(alertController, animated: true, completion: nil)
             startGame()
+            return
+        }
+        if checkLost() {
+            let alertController = UIAlertController(title: "LOSE", message: "You Lose >_<", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "Retry", style: .Default, handler: nil)
+            alertController.addAction(action)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            restartCurrentGame()
             return
         }
         // update Numbers
@@ -149,6 +180,8 @@ class GameViewController : UIViewController {
         else {
             operatorLabel.text = ""
         }
+        // update expression view
+        updateExprShow()
     }
     
     func uploadNum(index: Int) {
@@ -170,7 +203,7 @@ class GameViewController : UIViewController {
     }
     
     func checkWin() -> Bool {
-        if numArr[0] != nil && numArr[1] == nil && numArr[2] == nil && numArr[3] == nil {
+        if numArr[0] != nil && numArr[1] == nil && numArr[2] == nil && numArr[3] == nil && operand1 == nil && operand2 == nil {
             let result = numArr[0]!
             if result.compareTo(RationalNumber(24)) == 0 {
                 return true
@@ -178,6 +211,16 @@ class GameViewController : UIViewController {
         }
         return false
     }
+    func checkLost() -> Bool {
+        if numArr[0] != nil && numArr[1] == nil && numArr[2] == nil && numArr[3] == nil && operand1 == nil && operand2 == nil{
+            let result = numArr[0]!
+            if result.compareTo(RationalNumber(24)) != 0 {
+                return true
+            }
+        }
+        return false
+    }
+    
     
     func startGame() {
         for i in 0...3 {
