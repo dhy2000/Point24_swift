@@ -221,10 +221,31 @@ class GameViewController : UIViewController {
         return false
     }
     
+    func hasSolution() -> Bool {
+        for comb in nosolution {
+            var sorted1 = initArr.sort()
+            var sorted2 = comb.sort()
+            var flg: Bool = true
+            for i in 0..<4 {
+                if (sorted1[i] == sorted2[i]) {
+                    flg = false
+                }
+            }
+            if (flg) {
+                return false
+            }
+        }
+        return true
+    }
     
     func startGame() {
         for i in 0...3 {
             initArr[i] = Int(arc4random() % 13 + 1)
+        }
+        if !hasSolution() {
+            for i in 0...3 {
+                initArr[i] = Int(arc4random() % 13 + 1)
+            }
         }
         restartCurrentGame()
         updateView()
